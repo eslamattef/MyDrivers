@@ -235,6 +235,40 @@ void	GPIO_voidSetPortValue(GPIO_u8_PortType Copy_PortType,u16 Copy_u16PortValue)
 
 }
 
+/*		TOGGEL PIN VALUE												*/
+
+void	GPIO_voidTogglelPinValue(GPIO_u8_PinType Copy_PinNumberType)
+{
+	GPIO_u8_PinType   Local_PinNumber=Copy_PinNumberType%16; /*To get Number of this Pin in the Port*/
+	GPIO_u8_PortType  Local_PortNumber=Copy_PinNumberType/16; /*To get Number of Port*/
+	/*		Range Check							*/
+	if( Copy_PinNumberType < GPIO_TOTAL_PINS )
+	{
+		switch(Local_PortNumber)
+		{
+		case GPIO_PORTA:
+			TOG_BIT(GPIOA_ODR,Local_PinNumber);
+
+			break;
+		case GPIO_PORTB:
+			TOG_BIT(GPIOB_ODR,Local_PinNumber);
+
+			break;
+		case GPIO_PORTC:
+			TOG_BIT(GPIOC_ODR,Local_PinNumber);
+
+			break;
+		}
+
+	}
+	else
+	{
+		/*	Return ERROR	*/
+	}
+
+
+}
+
 /*		SET PORT NIPLE VALUE												*/
 
 void	GPIO_voidSetPortNipleValue(GPIO_u8_PortType Copy_PortType,u8 Copy_u8Niple ,u8 Copy_u8NipleValue)

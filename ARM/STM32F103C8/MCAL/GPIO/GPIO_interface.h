@@ -112,6 +112,8 @@ void  GPIO_voidSetPinValue(GPIO_u8_PinType Copy_PinNumberType,GPIO_u8_VoltageTyp
 void  GPIO_voidSetPortValue(GPIO_u8_PortType Copy_PortType,u16 Copy_u16PortValue);
 /*		SET PORT NIPLE VALUE												*/
 void  GPIO_voidSetPortNipleValue(GPIO_u8_PortType Copy_PortType,u8 Copy_u8Niple ,u8 Copy_u8NipleValue);
+/*      Toggel Pin Value                                             */
+void	GPIO_voidTogglelPinValue(GPIO_u8_PinType Copy_PinNumberType);
 /*		if Pin is Input (Return High or Low)	*/
 GPIO_u8_VoltageType		GPIO_voltGetPinValue(GPIO_u8_PinType Copy_PinNumberType);
 
