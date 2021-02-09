@@ -2,7 +2,7 @@
  * NVIC_program.c
  *
  *  Created on: Feb 7, 2021
- *      Author: Boon
+ *      Author: Eslam Attef
  */
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
