@@ -6,12 +6,7 @@
  */ 
 
 
-/*
- * segment.c
- *
- * Created: 12/2/2020 12:21:52 AM
- *  Author: Mr.MaM
- */ 
+
 #include "7Segment_interface.h"
 
 u8  arr_cathod[10]  ={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};

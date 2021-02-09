@@ -12,21 +12,21 @@
 void LCD_WriteData(u8 data)
 {
 	
-	GPIO_voidSetPinValue(RS,HIGH);
+	GPIO_voidSetPinValue(RS,GPIO_HIGH);
 	GPIO_voidSetPortValue(LCD_PORT,data);
-	GPIO_voidSetPinValue(EN,HIGH);
+	GPIO_voidSetPinValue(EN,GPIO_HIGH);
 	Delay_ms(1);
-	GPIO_voidSetPinValue(EN,LOW);
+	GPIO_voidSetPinValue(EN,GPIO_LOW);
 	Delay_ms(1);
 }
 
 void LCD_WriteCommand(u8 command)
 {
-	GPIO_voidSetPinValue(RS,LOW);
+	GPIO_voidSetPinValue(RS,GPIO_LOW);
 	GPIO_voidSetPortValue(LCD_PORT,command);
-	GPIO_voidSetPinValue(EN,HIGH);
+	GPIO_voidSetPinValue(EN,GPIO_HIGH);
 	Delay_ms(1);
-	GPIO_voidSetPinValue(EN,LOW);
+	GPIO_voidSetPinValue(EN,GPIO_LOW);
 	Delay_ms(1);
 	
 }
